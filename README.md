@@ -1,6 +1,6 @@
 # scrper
 
-Apify Actor that crawls start URLs with Playwright, captures page titles, and optionally follows links up to a configurable depth.
+Apify Actor that scrapes Pinterest pages with Playwright, scrolling to collect pin metadata (title, image, URL) from the supplied search, board, or pin feed URLs.
 
 ## Running locally
 
@@ -11,5 +11,5 @@ python -m compileall main.py  # quick syntax check
 
 ## Configuration
 
-- `start_urls`: list of objects with a `url` key to seed the crawl.
-- `max_depth`: maximum link-follow depth (default: `1`).
+- `start_urls`: list of objects with a `url` key pointing to Pinterest search, board, or feed pages (default: trending search feed).
+- `max_pins`: maximum pins to capture per URL (default: `50`).
